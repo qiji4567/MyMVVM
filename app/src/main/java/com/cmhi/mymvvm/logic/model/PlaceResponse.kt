@@ -1,9 +1,6 @@
 package com.cmhi.mymvvm.logic.model
 
-import android.location.Address
-import android.location.Location
 import com.google.gson.annotations.SerializedName
-import java.sql.ClientInfoStatus
 
 /**
  * =================================================
@@ -13,20 +10,18 @@ import java.sql.ClientInfoStatus
  * @Content:
  * =================================================
  */
-class PlaceResponse {
 
-    data class PlaceResponse(val status: String, val places: List<Place>)
 
-    data class Place(
-        val name: String,
-        val location: Location,
-        @SerializedName("formatted_address") val address: String
-    )
+class PlaceResponse(val status: String, val places: List<Place>)
 
-    data class Location(val long: String, val lat: String)
 
-}
+class Place(
+    val name: String,
+    val location: Location,
+    @SerializedName("formatted_address") val address: String
+)
 
+class Location(val lng: String, val lat: String)
 
 
 

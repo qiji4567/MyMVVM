@@ -1,7 +1,7 @@
 package com.cmhi.mymvvm.logic.network
 
 import com.cmhi.mymvvm.application.SunnyWeatherApplication
-import com.cmhi.mymvvm.logic.model.PlaceResponse.PlaceResponse
+import com.cmhi.mymvvm.logic.model.PlaceResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
