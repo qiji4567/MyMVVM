@@ -1,4 +1,4 @@
-package com.cmhi.mymvvm.ui.place
+package com.cmhi.mymvvm.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,7 +12,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cmhi.mymvvm.R
+import com.cmhi.mymvvm.act.MainActivity
 import com.cmhi.mymvvm.act.WeatherActivity
+import com.cmhi.mymvvm.ui.place.PlaceAdapter
+import com.cmhi.mymvvm.ui.place.PlaceViewModel
 import kotlinx.android.synthetic.main.fragment_place.*
 
 /**
@@ -40,7 +43,7 @@ class PlaceFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         //判断存储数据天气
-        if (viewModel.isPlaceSaved()){
+        if (activity is MainActivity && viewModel.isPlaceSaved()){
             val place = viewModel.getSavedPlace()
             val intent = Intent(context,WeatherActivity::class.java).apply {
                 putExtra("location_lng",place.location.lng)
@@ -49,6 +52,7 @@ class PlaceFragment : Fragment() {
             }
             startActivity(intent)
             activity?.finish()
+            return
         }
 
         val layoutManager = LinearLayoutManager(activity)

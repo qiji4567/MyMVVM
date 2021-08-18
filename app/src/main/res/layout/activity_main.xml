@@ -7,12 +7,19 @@
     android:orientation="vertical"
     tools:context=".act.MainActivity">
 
-
-    <fragment
-        android:id="@+id/placeFragment"
-        android:name="com.cmhi.mymvvm.ui.place.PlaceFragment"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/placeFragment"
+            android:name="com.cmhi.mymvvm.ui.fragment.PlaceFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+    </FrameLayout>
 
 
 </FrameLayout>
