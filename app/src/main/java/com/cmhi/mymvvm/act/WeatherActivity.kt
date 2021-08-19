@@ -1,5 +1,6 @@
 package com.cmhi.mymvvm.act
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -28,6 +29,7 @@ class WeatherActivity : BaseActivity() {
 
     val viewModel by lazy { ViewModelProvider(this).get(WeatherViewModel::class.java) }
 
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

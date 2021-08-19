@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.cmhi.mymvvm.R
-import com.cmhi.mymvvm.act.MainActivity
 import com.cmhi.mymvvm.act.WeatherActivity
 import com.cmhi.mymvvm.logic.model.Place
 import com.cmhi.mymvvm.ui.fragment.PlaceFragment
