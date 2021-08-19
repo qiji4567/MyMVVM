@@ -9,7 +9,7 @@ android {
 //    buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.cmhi.mymvvm"
+        applicationId "cn.weather.mymvvm"
         minSdkVersion 19
         targetSdkVersion 31
         versionCode 1
